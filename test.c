@@ -2,7 +2,7 @@
 
 int main (void)
 {
-  FILE * f = fopen ("input.txt", "w");
+  FILE * f = fopen ("input2.txt", "w");
   if (f) {
     int c = fgetc (f);
     if (c != EOF)
