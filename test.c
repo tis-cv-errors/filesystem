@@ -15,6 +15,15 @@ int main (void)
   FILE * f2 = fopen ("input2.txt", "w");
   if (f2) {
     fwrite(str , 1 , sizeof(str) , f2);
-    fclose (f);
+    fclose (f2);
   }
+  
+  f2 = fopen ("input2.txt", "r");
+  if (f2) {
+    int c = fgetc (f2);
+    if (c != EOF)
+      printf ("First char = '%c'\n", (char)c);
+    fclose (f2);
+  }
+  
 }
