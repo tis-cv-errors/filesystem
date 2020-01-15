@@ -10,7 +10,7 @@ int main (void)
     fclose (f);
   }
   
-  char str[] = "This is tutorialspoint.com";$
+  char str[] = "This is tutorialspoint.com";
     
   FILE * f2 = fopen ("input2.txt", "w");
   if (f2) {
