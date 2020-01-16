@@ -44,4 +44,30 @@ int main (void)
     fwrite(str , 1 , sizeof(str) , f4);
     fclose (f4);
   }
+  
+  printf ("Read 4rd file\n");
+  f3 = fopen ("input4.txt", "r");
+  if (f4) {
+    int c = fgetc (f4);
+    if (c != EOF)
+      printf ("First char = '%c'\n", (char)c);
+    fclose (f4);
+  }
+  
+  printf ("Create and write 5rd file\n");
+  FILE * f5 = fopen ("input5.txt", "w+");
+  if (f5) {
+    char str[] = "5th file content";
+    fwrite(str , 1 , sizeof(str) , f5);
+    fclose (f5);
+  }
+  
+  printf ("Read 5rd file\n");
+  f3 = fopen ("input5.txt", "r");
+  if (f5) {
+    int c = fgetc (f5);
+    if (c != EOF)
+      printf ("First char = '%c'\n", (char)c);
+    fclose (f5);
+  }
 }
