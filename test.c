@@ -12,13 +12,13 @@ int main (void)
   
   char str[] = "This is tutorialspoint.com";
     
-  FILE * f2 = fopen ("input2.txt", "w+");
+  FILE * f2 = fopen ("xxx.txt", "w+");
   if (f2) {
     fwrite(str , 1 , sizeof(str) , f2);
     fclose (f2);
   }
   
-  f2 = fopen ("input2.txt", "r");
+  f2 = fopen ("xxx.txt", "r");
   if (f2) {
     int c = fgetc (f2);
     if (c != EOF)
