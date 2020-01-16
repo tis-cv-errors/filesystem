@@ -20,6 +20,12 @@ int main (void)
     fclose (f2);
   }
   
+  printf ("Create pipe\n");
+  int pipefds[2];
+  if(pipe(pipefds) == -1) {
+    printf ("Error pipe\n");
+  }
+  
   printf ("Create and write 3rd file\n");
   FILE * f3 = fopen ("input3.txt", "w+");
   if (f3) {
