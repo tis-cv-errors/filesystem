@@ -12,7 +12,7 @@ int main (void)
   
   char str[] = "This is tutorialspoint.com";
   
-  FILE * f2 = fopen ("input2.txt", "w+");
+  FILE * f2 = fopen ("input2.txt", "r");
     
   FILE * f3 = fopen ("input3.txt", "w+");
   if (f3) {
