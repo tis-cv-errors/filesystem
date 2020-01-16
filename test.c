@@ -37,12 +37,6 @@ int main (void)
     fclose (f3);
   }
   
-  printf ("Create 1st pipe\n");
-  int pipefds[2];
-  if(pipe(pipefds) == -1) {
-    printf ("Error 1st pipe\n");
-  }
-  
   printf ("Create and write 4rd file\n");
   FILE * f4 = fopen ("input4.txt", "w+");
   if (f4) {
@@ -58,6 +52,12 @@ int main (void)
     if (c != EOF)
       printf ("First char = '%c'\n", (char)c);
     fclose (f4);
+  }
+  
+  printf ("Create 1st pipe\n");
+  int pipefds[2];
+  if(pipe(pipefds) == -1) {
+    printf ("Error 1st pipe\n");
   }
   
   printf ("Create and write 5rd file\n");
