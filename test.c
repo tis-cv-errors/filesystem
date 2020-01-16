@@ -23,7 +23,7 @@ int main (void)
   printf ("Create and write 3rd file\n");
   FILE * f3 = fopen ("input3.txt", "w+");
   if (f3) {
-    char str[] = "This is tutorialspoint.com";
+    char str[] = "3rd file content";
     fwrite(str , 1 , sizeof(str) , f3);
     fclose (f3);
   }
@@ -37,4 +37,11 @@ int main (void)
     fclose (f3);
   }
   
+  printf ("Create and write 4rd file\n");
+  FILE * f4 = fopen ("input4.txt", "w+");
+  if (f4) {
+    char str[] = "4th file content";
+    fwrite(str , 1 , sizeof(str) , f4);
+    fclose (f4);
+  }
 }
