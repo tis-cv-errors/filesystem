@@ -46,7 +46,7 @@ int main (void)
   }
   
   printf ("Read 4rd file\n");
-  f3 = fopen ("input4.txt", "r");
+  f4 = fopen ("input4.txt", "r");
   if (f4) {
     int c = fgetc (f4);
     if (c != EOF)
@@ -63,7 +63,7 @@ int main (void)
   }
   
   printf ("Read 5rd file\n");
-  f3 = fopen ("input5.txt", "r");
+  f5 = fopen ("input5.txt", "r");
   if (f5) {
     int c = fgetc (f5);
     if (c != EOF)
