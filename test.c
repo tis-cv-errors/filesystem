@@ -56,6 +56,7 @@ int main (void)
   
   printf ("Create and write 5rd file\n");
   FILE * f5 = fopen ("input5.txt", "w+");
+  printf ("After creation of 5rd file\n");
   if (f5) {
     char str[] = "5th file content";
     fwrite(str , 1 , sizeof(str) , f5);
