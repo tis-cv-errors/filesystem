@@ -11,19 +11,21 @@ int main (void)
   }
   
   char str[] = "This is tutorialspoint.com";
+  
+  FILE * f2 = fopen ("input2.txt", "w+");
     
-  FILE * f2 = fopen ("xxx.txt", "w+");
-  if (f2) {
-    fwrite(str , 1 , sizeof(str) , f2);
-    fclose (f2);
+  FILE * f3 = fopen ("input3.txt", "w+");
+  if (f3) {
+    fwrite(str , 1 , sizeof(str) , f3);
+    fclose (f3);
   }
   
-  f2 = fopen ("xxx.txt", "r");
-  if (f2) {
-    int c = fgetc (f2);
+  f3 = fopen ("input3.txt", "r");
+  if (f3) {
+    int c = fgetc (f3);
     if (c != EOF)
       printf ("First char = '%c'\n", (char)c);
-    fclose (f2);
+    fclose (f3);
   }
   
 }
