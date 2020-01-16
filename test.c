@@ -10,12 +10,17 @@ int main (void)
     fclose (f);
   }
   
-  char str[] = "This is tutorialspoint.com";
-  
   FILE * f2 = fopen ("input2.txt", "r");
+  if (f2) {
+    int c = fgetc (f2);
+    if (c != EOF)
+      printf ("First char = '%c'\n", (char)c);
+    fclose (f2);
+  }
     
   FILE * f3 = fopen ("input3.txt", "w+");
   if (f3) {
+    char str[] = "This is tutorialspoint.com";
     fwrite(str , 1 , sizeof(str) , f3);
     fclose (f3);
   }
