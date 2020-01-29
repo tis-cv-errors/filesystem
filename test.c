@@ -11,7 +11,7 @@ int main (void)
     fclose (f);
   }
   
-  printf ("Read 2nd file\n");
+  /*printf ("Read 2nd file\n");
   FILE * f2 = fopen ("input2.txt", "r");
   if (f2) {
     int c = fgetc (f2);
@@ -76,5 +76,5 @@ int main (void)
     if (c != EOF)
       printf ("First char = '%c'\n", (char)c);
     fclose (f5);
-  }
+  }*/
 }
