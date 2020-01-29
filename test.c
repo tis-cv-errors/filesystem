@@ -4,12 +4,12 @@ int main (void)
 {
   printf ("Read 1st file\n");
   FILE * f = fopen ("input.txt", "r");
-  if (f) {
+  //if (f) {
     int c = fgetc (f);
     if (c != EOF)
       printf ("First char = '%c'\n", (char)c);
     fclose (f);
-  }
+  //}
   
   /*printf ("Read 2nd file\n");
   FILE * f2 = fopen ("input2.txt", "r");
